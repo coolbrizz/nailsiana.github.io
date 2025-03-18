@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+Allow: /wp-content/uploads/
+Allow: /style/
+Allow: /js/
+
+Sitemap: https://www.nailsiana.com/sitemap.xml

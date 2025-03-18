@@ -8,7 +8,7 @@
     
     <!-- Title optimized for SEO with keywords -->
     <title>Nail'Siana - Salon de Manucure à Port-Jérôme-sur-Seine</title>
-    
+    <link rel="canonical" href="https://www.nailsiana.com" />
     <!-- Meta description for better SEO -->
     <meta name="description" content="Nail'Siana est un salon de manucure à Port-Jérôme-sur-Seine, offrant des services de pose d’ongles, manucure, et soins des ongles avec des produits de haute qualité comme AKYADO.">
     
@@ -19,10 +19,29 @@
     <meta property="og:title" content="Nail'Siana - Salon de Manucure à Port-Jérôme-sur-Seine">
     <meta property="og:description" content="Découvrez Nail'Siana, un salon de manucure où la beauté des ongles est synonyme de bien-être et de soins de qualité.">
     <meta property="og:image" content="/img/logo2_transparent.png">
-    <meta property="og:url" content="https://votresite.com">
+    <meta property="og:url" content="https://www.nailsiana.com">
     <meta property="og:type" content="website">
+
+    <!-- JSON-LD for structured data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Nail'Siana",
+          "url": "https://www.nailsiana.com",
+          "logo": "https://www.nailsiana.com/img/logo2_transparent.png"
+        }
+        </script>
+        
+    <!-- Icone du site  -->
+    <link rel="icon" href="https://www.nailsiana.com/favicon.ico" type="image/x-icon">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
-    <link rel="stylesheet" href="/style/index.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="stylesheet" href="/style/index.min.css">
+
 </head>
 
 <body>
@@ -50,13 +69,13 @@
 
         <section>
             <div class="part2">
-                <h2>Produits de Beauté et Soins des Ongles</h2>
+                <h1>Produits de Beauté et Soins des Ongles</h1>
                 <div class="blocongle">
                     <p>Chez <strong>Nail’Siana</strong>, j’utilise les produits de marque <strong>AKYADO</strong>, une marque suisse spécialisée dans les produits de soins des ongles et de beauté. AKYADO est reconnue pour son engagement envers la qualité, l'innovation, et le respect des normes professionnelles. Cette marque se distingue par la formulation de ses produits sans ingrédients nocifs tels que le toluène, le formaldéhyde, et le DBP. </br> AKYADO met également un point d'honneur à ne pas tester ses produits sur les animaux et à privilégier des ingrédients éthiquement sourcés. Chaque produit est conçu pour offrir des résultats exceptionnels, tout en prenant soin des utilisateurs et de l'environnement.</p>
                 </div>
                 <div class="logocentre">            
                     <a href="https://www.akyado-pro.ch/">
-                    <img src="/img/logo_akyado_healthbeauty_nb.jpg" class="logoakyado" alt="Logo AKYADO, marque de soins des ongles">
+                    <img src="/img/logo_akyado.webp" class="logoakyado" alt="Logo AKYADO, marque de soins des ongles">
                     </a>
                 </div>
             </div>
@@ -64,13 +83,20 @@
 
         <section>
             <div class="part3">
-                <h2>Rencontrez Anais, Prothésiste Ongulaire</h2>
+                <h1>Rencontrez Anais, Prothésiste Ongulaire</h1>
                 <div class="blocprothesiste">
-                    <img src="/img/ovaleanais.png" class="imgprothesiste" alt="Anais, prothésiste ongulaire chez Nail'Siana">
+                    <img src="/img/prothésiste.png" class="imgprothesiste" alt="Anais, prothésiste ongulaire chez Nail'Siana">
                     <p>Prothésiste ongulaire passionnée depuis 4 ans, j’ai à cœur de prendre soin de chacune de mes clientes afin de satisfaire au mieux leurs envies. Mon parcours professionnel est enrichi par plusieurs formations spécialisées, me permettant de maîtriser une large gamme de techniques modernes et classiques en manucure et pose d’ongles tels que : la pose américaine, la manucure russe, la peinture aquarelle sur ongles, et l’application parfaite du vernis semi-permanent.
                     Ma priorité est d’offrir une expérience unique et personnalisée à chaque cliente, tout en garantissant des résultats impeccables et durables.</p>
                 </div>
             </div>
+            <main class="container-avis">
+                <h2>Ce que pensent mes clientes :</h2>
+                <div id="avis-container">
+        
+                </div> 
+               
+            </main>
             <div class="textfinal">
                 <h2>Réservez votre Rendez-vous dès Maintenant</h2>
                 <p>Appelez-nous au <strong>06.16.15.78.11</strong> pour fixer votre prochain rendez-vous au salon Nail'Siana.</p>
@@ -82,36 +108,40 @@
         <div class="footercontainer">
             <div class="bloccontainer">
                 <div class="adresse">
-                    <h2>Adresse du Salon :</h2>
+                    <h3>Adresse du Salon :</h3>
                     <p>26 Rue Henri Messager, <br>76330 Port-Jérôme-sur-Seine</p>
                     <a href="https://www.google.com/maps/@49.4870984,0.5699347,3a,75y,55.62h,90t/data=!3m6!1e1!3m4!1sfsnr0lnmuPw4H_UsYS44Uw!2e0!7i16384!8i8192?coh=205409&entry=ttu">
-                        <img src="/img/adresse.png" alt="Voir l'adresse du salon Nail'Siana sur Google Maps">
+                        <img src="/img/adresse.webp" alt="Voir l'adresse du salon Nail'Siana sur Google Maps">
                     </a>
                 </div>
                 <div class="logo">
                     <div class="reseausociaux">
                         <a href="https://www.facebook.com/profile.php?id=100008703640663">
-                            <img src="/img/facebook.png" alt="Suivez Nail'Siana sur Facebook">
+                            <img src="/img/facebook.webp" alt="Suivez Nail'Siana sur Facebook">
                                                 </a>
                         <a href="https://www.instagram.com/nailsiiana/">
-                <img src="/img/instagram.png" alt="Suivez Nail'Siana sur Instagram">
+                <img src="/img/instagram.webp" alt="Suivez Nail'Siana sur Instagram">
             </a>
-            <h2>Rejoignez-moi sur les réseaux sociaux</h2>
+            <h3>Rejoignez-moi sur les réseaux sociaux</h3>
             </div>
             </div>
             <div class="contact">
                 <div class="tel">
-                    <h2>Horaires du salon :</h2>
-                    <p>Lundi, Jeudi, Samedi : 13h - 19h<br>
-                        Mardi, Mercredi, Vendredi : 9h - 19h</p>
+                    <h3>Horaires du salon :</h3>
+                    <p>Lundi : 13h - 19h<br>
+                        Mardi, Mercredi, Vendredi : 9h - 19h<br>
+                        Jeudi, Samedi : 9h - 13h
+                    </p>
                 </div>
             </div>
-
         </div>
-        <p class="droits">© 2024 Tous droits réservés Nail'Siana. Site créé par <a href="mailto:antony.auvray@outlook.com">Antony Auvray</a></p>
-
         </div>
+        <div class="droits">
+            <a href="/mentionslegales.html">Mentions légales </a>
+            <p> ©2025 Nail'Siana. Site créé par <a href="https://coolbrizz.github.io/MonPortfolio/">Antony Auvray</a></p>
+        </div>
+
     </footer>
-    
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,694 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "modern";
+  src: url(/style/PlaywriteUSModern-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "lato";
+  src: url(/fonts/Lato-Bold.ttf);
+}
+body, html {
+  font-family: "modern";
+  margin: 0px;
+  padding: 0;
+  background-image: url("/img/elegant_hand_painted_alcohol_ink_background_with_gold_glitter_0609.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body h1, html h1 {
+  font-size: 40px;
+  color: #52355e;
+  font-family: "lato";
+}
+body p, html p {
+  line-height: 2.5;
+}
+body h3, html h3 {
+  font-size: 25px;
+}
+
+.headercontainer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.headercontainer .imgaccueil {
+  height: 300px;
+  margin: 30px 0px 10px 0px;
+}
+
+.bandeaunav {
+  margin: 0px;
+  padding: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid #D9B65E;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  list-style: none;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.navigation li {
+  margin: 0 50px;
+}
+
+.navigation .lien {
+  font-family: "modern";
+  font-weight: bold;
+  font-size: 18px;
+  color: #52355e;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.navigation .lien:hover, .navigation .lien.active {
+  color: #D9B65E;
+}
+
+.navigation .lien::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #D9B65E;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.navigation .lien:hover::after, .navigation .lien.active::after {
+  width: 100%;
+}
+
+.part1 {
+  text-align: center;
+  margin: 0;
+}
+.part1 p {
+  margin: 0px 200px 30px 200px;
+}
+.part1 .imgsalon {
+  text-align: center;
+  border-radius: 10px;
+  max-width: 800px;
+  max-height: 400px;
+}
+
+.logocentre .logoakyado {
+  text-align: center;
+  width: 150px;
+}
+
+.part2 {
+  padding: 50px 0px 50px 0px;
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  margin-top: 100px;
+}
+.part2 .blocongle {
+  display: flex;
+  justify-content: center;
+  margin: 20px 200px 30px 200px;
+}
+
+.part3 {
+  text-align: center;
+  margin: 0;
+  margin-top: 100px;
+}
+.part3 .blocprothesiste {
+  display: flex;
+  margin: 20px 200px 30px 200px;
+}
+.part3 .imgprothesiste {
+  width: 600px;
+  max-height: 300px;
+}
+.part3 p {
+  padding-left: 50px;
+}
+
+.textfinal {
+  text-align: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.footercontainer {
+  margin-top: 100px;
+  height: 300px;
+  background-color: white;
+  border-top: solid 4px #D9B65E;
+}
+.footercontainer p {
+  color: black;
+  text-align: center;
+}
+.footercontainer .bloccontainer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  margin: 10px 100px 20px 100px;
+}
+.footercontainer .bloccontainer p {
+  color: #52355e;
+}
+.footercontainer h3 {
+  color: #52355e;
+}
+.footercontainer .adresse {
+  justify-content: center;
+  text-align: center;
+}
+.footercontainer .adresse img {
+  max-width: 50px;
+}
+.footercontainer .adresse h3 {
+  text-decoration: underline;
+}
+.footercontainer .adresse p {
+  color: black;
+}
+.footercontainer .logo {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.footercontainer .logo img {
+  max-width: 80px;
+  margin: 20px;
+}
+.footercontainer .contact h3 {
+  text-decoration: underline;
+}
+.footercontainer .contact img {
+  max-width: 30px;
+}
+.footercontainer .contact p {
+  font-weight: 600;
+  color: black;
+}
+
+.pagetarif {
+  text-align: center;
+}
+.pagetarif .textfinal {
+  margin-top: 50px;
+}
+
+.cadre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tarif-container {
+  max-width: 700px;
+  padding: 20px;
+  background-color: #fff;
+  border: 8px solid #D9B65E; /* Couleur du cadre */
+  border-radius: 15px; /* Arrondi des coins du cadre */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre portée */
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.highlight {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.offer {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.containerstyle {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.containerstyle h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #D9B65E;
+  margin-bottom: 50px;
+}
+.containerstyle .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.containerstyle .grid-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.containerstyle .grid-item:hover {
+  transform: translateY(-5px);
+}
+.containerstyle .grid-item img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.containerstyle .description {
+  padding: 15px;
+  text-align: center;
+}
+.containerstyle .description h2 {
+  font-size: 24px;
+  color: #D9B65E;
+  margin: 0 0 10px;
+}
+.containerstyle .description p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.containerGall {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.containerGall h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #D9B65E;
+  margin-bottom: 50px;
+}
+.containerGall .grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.containerGall .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.containerGall .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+.containerGall .gallery-item:hover img {
+  transform: scale(1.1);
+}
+.containerGall .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  border-radius: 0 0 10px 10px;
+}
+.containerGall .gallery-item:hover .overlay {
+  height: 40%;
+}
+.containerGall .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.containerGall .textfinal {
+  display: none;
+}
+
+@media screen and (max-width: 840px) {
+  .part1 .imgsalon {
+    width: 80%;
+    margin-top: 30px;
+    margin: 20px;
+  }
+  .part2 .blocongle {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .part3 .blocprothesiste {
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+  }
+  .imgprothesiste {
+    max-width: 70%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .part1 p, .part2 .blocongle p, .part3 .blocprothesiste p {
+    margin: 0 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .textfinal {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .footercontainer .bloccontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footercontainer .bloccontainer .logo {
+    margin: 0;
+  }
+  .footercontainer .bloccontainer .logo h2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .part3 .blocprothesiste {
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+  }
+  .part3 .blocprothesiste .imgprothesiste {
+    max-width: 300px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .pagetarif .textfinal {
+    display: block;
+  }
+  .containerGall .textfinal {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+  }
+  .navigation li {
+    margin: 10px 0;
+  }
+  .headercontainer .imgaccueil {
+    height: 200px;
+    margin: 20px 0px 10px 0px;
+  }
+  .bloccontainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .footercontainer .droits {
+    font-size: small;
+  }
+  .textfinal {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 505px) {
+  .navigation li {
+    margin: 5px 0;
+  }
+  .navigation .lien {
+    font-size: 16px;
+  }
+  .part1 p, .part2 .blocongle p, .part3 .blocprothesiste p {
+    margin: 0 10px;
+  }
+  .part2, .part3 {
+    margin-top: 50px;
+  }
+  .pagetarif .cadre {
+    margin-bottom: 50px;
+  }
+  .footercontainer .bloccontainer {
+    margin: 0;
+  }
+  .footercontainer .bloccontainer .logo {
+    margin: 0;
+  }
+}
+/* Conteneur principal */
+.container-avis {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#avis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Carte d'avis */
+.review {
+  background-color: rgba(255, 255, 255, 0.6156862745);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 300px; /* Taille fixe pour chaque carte */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.review:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.review-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px; /* Espacement entre étoiles et date */
+  font-size: 0.9em;
+  color: #666;
+  margin-top: auto;
+}
+
+.rating {
+  font-size: 1.2em;
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.review-date {
+  color: #555;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.review img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  transform: translateY(30%);
+}
+
+.review-title {
+  display: flex;
+}
+
+/* Nom de l'auteur */
+.review h3 {
+  font-size: 1.2em;
+  color: #d16ba5; /* Rose élégant */
+  margin-bottom: 5px;
+}
+
+/* Texte de l'avis */
+.review p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Note avec étoiles */
+.rating {
+  font-size: 1em;
+  color: #ff9800;
+  font-weight: bold;
+}
+
+/* Ajout d'une petite animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.review {
+  animation: fadeIn 0.5s ease-in-out;
+}/*# sourceMappingURL=index.css.map */
+/* Conteneur principal */
+.container-avis {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  #avis-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Carte d'avis */
+  .review {
+    background-color: rgba(255, 255, 255, 0.6156862745);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px; /* Taille fixe pour chaque carte */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+  }
+  
+  .review:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+  }
+  
+  .review-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px; /* Espacement entre étoiles et date */
+    font-size: 0.9em;
+    color: #666;
+    margin-top: auto;
+  }
+  
+  .rating {
+    font-size: 1.2em;
+    color: #ff9800;
+    font-weight: bold;
+  }
+  
+  .review-date {
+    color: #555;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  
+  .review img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    transform: translateY(30%);
+  }
+  
+  .review-title {
+    display: flex;
+  }
+  
+  /* Nom de l'auteur */
+  .review h3 {
+    font-size: 1.2em;
+    color: #d16ba5; /* Rose élégant */
+    margin-bottom: 5px;
+  }
+  
+  /* Texte de l'avis */
+  .review p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  /* Note avec étoiles */
+  .rating {
+    font-size: 1em;
+    color: #ff9800;
+    font-weight: bold;
+  }
+  
+  /* Ajout d'une petite animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .review {
+    animation: fadeIn 0.5s ease-in-out;
+  }/*# sourceMappingURL=index.css.map */
+  .droits{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  &:hover{
+    font-size: 2vh;
+    color: #52355e;
+  }
+}
+}

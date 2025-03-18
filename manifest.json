@@ -1,0 +1,12 @@
+{
+    "name": "Nail'Siana",
+    "short_name": "Nail'Siana",
+    "icons": [
+      {
+        "src": "/img/logo2_transparent.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  

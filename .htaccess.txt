@@ -1,0 +1,118 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Activer les options de sécurité générales
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header set X-Frame-Options "DENY"
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Empêcher l'exécution des fichiers PHP dans certains répertoires
+<FilesMatch "\.(php|phar)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+# Bloquer l'accès aux fichiers sensibles
+<FilesMatch "(\.env|\.htaccess|\.htpasswd|composer\.(json|lock)|phpunit\.xml)$">
+  Require all denied
+</FilesMatch>
+
+# Désactiver la liste des répertoires
+Options -Indexes
+
+# Activer le réécriture d'URL si nécessaire
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Exemple : Redirection vers HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Limiter les types de fichiers téléchargeables (facultatif)
+<FilesMatch "\.(exe|sh|bat|bin|dll)$">
+  Require all denied
+</FilesMatch>
+
+# Protéger contre les injections de fichiers
+<IfModule mod_rewrite.c>
+  RewriteCond %{QUERY_STRING} \.\.\/ [NC,OR]
+  RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
+  RewriteCond %{QUERY_STRING} etc/passwd [NC,OR]
+  RewriteCond %{QUERY_STRING} ftp: [NC,OR]
+  RewriteCond %{QUERY_STRING} http: [NC,OR]
+  RewriteCond %{QUERY_STRING} https: [NC,OR]
+  RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+  RewriteRule .* - [F]
+</IfModule>
+
+# Limiter le nombre de connexions depuis une IP
+<IfModule mod_reqtimeout.c>
+  RequestReadTimeout header=20-40,MinRate=500 body=20,MinRate=500
+</IfModule>
+
+#Page de redirection 
+ErrorDocument 404 /erreur.html
+ErrorDocument 500 /erreur.html
+ErrorDocument 403 /erreur.html
+
+# Activation de la réécriture d'URL
+RewriteEngine On
+
+# Redirection vers HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirection vers une URL avec www (décommente si besoin)
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Suppression du trailing slash sauf pour les dossiers
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Forcer l'encodage UTF-8
+AddDefaultCharset UTF-8
+
+# Compression Gzip pour améliorer la vitesse de chargement
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache navigateur pour optimiser les performances
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Protection contre le hotlinking des images
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https://(www\.)?ton-domaine\.com/ [NC]
+    RewriteRule \.(jpg|jpeg|png|gif)$ - [F]
+</IfModule>
+
+# Protection des fichiers sensibles
+<FilesMatch "(^\.htaccess|\.htpasswd|config\.php|php.ini|php5.ini|install\.php|wp-config\.php|xmlrpc\.php)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+
