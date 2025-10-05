@@ -1,15 +1,22 @@
 @charset "UTF-8";
+.bandeaunav,
 .headercontainer,
 body,
 html {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 .navigation,
 .part2 .blocongle {
   justify-content: center;
 }
+.changement-tarifs a,
+.navigation .lien {
+  text-decoration: none;
+  color: #52355e;
+}
 .bandeaunav,
+.changement-tarifs,
 .headercontainer,
 .part1,
 .part1 .imgsalon,
@@ -25,10 +32,6 @@ html {
   font-family: modern;
   src: url(/style/PlaywriteUSModern-VariableFont_wght.ttf);
 }
-@font-face {
-  font-family: lato;
-  src: url(/fonts/Lato-Bold.ttf);
-}
 body,
 html {
   font-family: modern;
@@ -40,15 +43,10 @@ body h1,
 html h1 {
   font-size: 40px;
   color: #52355e;
-  font-family: lato;
 }
 body p,
 html p {
   line-height: 2.5;
-}
-body h3,
-html h3 {
-  font-size: 25px;
 }
 .headercontainer .imgaccueil {
   height: 300px;
@@ -60,17 +58,24 @@ html h3 {
   display: flex;
 }
 .bandeaunav {
-  margin: 0 0 50px;
-  padding: 0;
   position: relative;
   background-color: #f8f8f8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 4px solid #d9b65e;
 }
-.footercontainer,
+.changement-tarifs {
+  background-color: #d9b65e;
+  width: 100%;
+}
+.footercontainer {
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .part2,
 .tarif-container {
   background-color: #fff;
+}
+.changement-tarifs p {
+  font-size: 16px;
+  color: #52355e;
 }
 .navigation {
   display: flex;
@@ -87,8 +92,6 @@ html h3 {
   font-family: modern;
   font-weight: 700;
   font-size: 18px;
-  color: #52355e;
-  text-decoration: none;
   position: relative;
   padding: 5px 0;
   transition: color 0.3s ease-in-out;
@@ -154,13 +157,31 @@ html h3 {
 .textfinal {
   padding-top: 50px;
 }
+.droits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.droits a {
+  text-decoration: none;
+  text-decoration: underline;
+  color: #52355e;
+  font-weight: bold;
+  padding: 0 30px 0 30px;
+  &:hover {
+    font-size: 2vh;
+    color: #52355e;
+  }
+}
+
 .footercontainer {
   margin-top: 100px;
-  height: 300px;
+  min-height: 300px;
   border-top: 4px solid #d9b65e;
 }
 .footercontainer p {
-  color: #000;
+  color: #52355e;
   text-align: center;
 }
 .footercontainer .bloccontainer {
@@ -177,9 +198,6 @@ html h3 {
 .footercontainer .adresse img {
   max-width: 50px;
 }
-.footercontainer .adresse p {
-  color: #000;
-}
 .footercontainer .logo {
   text-align: center;
   margin-left: 100px;
@@ -193,8 +211,7 @@ html h3 {
   max-width: 30px;
 }
 .footercontainer .contact p {
-  font-weight: 600;
-  color: #000;
+  font-weight: 1000;
 }
 .pagetarif {
   text-align: center;
@@ -353,12 +370,8 @@ p {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .part1 p,
-  .part2 .blocongle p,
   .part3 .blocprothesiste p {
-    margin: 0 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 0;
   }
   .textfinal {
     margin-top: 50px;
@@ -376,6 +389,11 @@ p {
   .footercontainer .bloccontainer .logo h2 {
     display: none;
   }
+  .part1 p,
+  .part2 .blocongle,
+  .part3 p {
+    margin: 0 10px 30px;
+  }
 }
 @media screen and (max-width: 1300px) {
   .part3 .blocprothesiste {
@@ -388,6 +406,9 @@ p {
     height: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .part3 p {
+    padding-left: 0;
   }
   .containerGall .textfinal,
   .pagetarif .textfinal {
@@ -409,11 +430,15 @@ p {
     display: flex;
     flex-direction: row;
   }
-  .footercontainer .droits {
-    font-size: small;
-  }
   .textfinal {
     margin-top: 100px;
+  }
+  .droits {
+    display: flex;
+    flex-direction: column;
+  }
+  .droits p {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 505px) {
@@ -481,10 +506,6 @@ p {
   font-size: 0.9em;
   font-weight: 400;
 }
-.droits,
-.rating {
-  font-weight: 700;
-}
 .review img {
   width: 40px;
   height: 40px;
@@ -508,6 +529,7 @@ p {
 .rating {
   font-size: 1em;
   color: #ff9800;
+  font-weight: 700;
 }
 @keyframes fadeIn {
   from {
@@ -518,12 +540,4 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.droits {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
-  color: #000;
 }

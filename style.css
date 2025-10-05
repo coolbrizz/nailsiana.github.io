@@ -7,7 +7,8 @@
   font-family: "lato";
   src: url(/fonts/Lato-Bold.ttf);
 }
-body, html {
+body,
+html {
   font-family: "modern";
   margin: 0px;
   padding: 0;
@@ -15,15 +16,18 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body h1, html h1 {
+body h1,
+html h1 {
   font-size: 40px;
   color: #52355e;
   font-family: "lato";
 }
-body p, html p {
+body p,
+html p {
   line-height: 2.5;
 }
-body h3, html h3 {
+body h3,
+html h3 {
   font-size: 25px;
 }
 
@@ -45,7 +49,7 @@ body h3, html h3 {
   position: relative;
   background-color: #f8f8f8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 4px solid #D9B65E;
+  border-bottom: 4px solid #d9b65e;
 }
 
 .navigation {
@@ -73,8 +77,9 @@ body h3, html h3 {
   transition: color 0.3s ease-in-out;
 }
 
-.navigation .lien:hover, .navigation .lien.active {
-  color: #D9B65E;
+.navigation .lien:hover,
+.navigation .lien.active {
+  color: #d9b65e;
 }
 
 .navigation .lien::after {
@@ -82,7 +87,7 @@ body h3, html h3 {
   display: block;
   width: 0;
   height: 2px;
-  background: #D9B65E;
+  background: #d9b65e;
   transition: width 0.3s;
   position: absolute;
   bottom: -2px;
@@ -91,7 +96,8 @@ body h3, html h3 {
   margin: auto;
 }
 
-.navigation .lien:hover::after, .navigation .lien.active::after {
+.navigation .lien:hover::after,
+.navigation .lien.active::after {
   width: 100%;
 }
 
@@ -154,7 +160,7 @@ body h3, html h3 {
   margin-top: 100px;
   height: 300px;
   background-color: white;
-  border-top: solid 4px #D9B65E;
+  border-top: solid 4px #d9b65e;
 }
 .footercontainer p {
   color: black;
@@ -224,7 +230,7 @@ body h3, html h3 {
   max-width: 700px;
   padding: 20px;
   background-color: #fff;
-  border: 8px solid #D9B65E; /* Couleur du cadre */
+  border: 8px solid #d9b65e; /* Couleur du cadre */
   border-radius: 15px; /* Arrondi des coins du cadre */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre portée */
   position: relative;
@@ -266,7 +272,7 @@ p {
 .containerstyle h1 {
   text-align: center;
   font-size: 36px;
-  color: #D9B65E;
+  color: #d9b65e;
   margin-bottom: 50px;
 }
 .containerstyle .grid-container {
@@ -288,7 +294,7 @@ p {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .containerstyle .description {
   padding: 15px;
@@ -296,7 +302,7 @@ p {
 }
 .containerstyle .description h2 {
   font-size: 24px;
-  color: #D9B65E;
+  color: #d9b65e;
   margin: 0 0 10px;
 }
 .containerstyle .description p {
@@ -313,7 +319,7 @@ p {
 .containerGall h1 {
   text-align: center;
   font-size: 36px;
-  color: #D9B65E;
+  color: #d9b65e;
   margin-bottom: 50px;
 }
 .containerGall .grid-gallery {
@@ -386,7 +392,9 @@ p {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .part1 p, .part2 .blocongle p, .part3 .blocprothesiste p {
+  .part1 p,
+  .part2 .blocongle p,
+  .part3 .blocprothesiste p {
     margin: 0 20px;
     padding-right: 20px;
     padding-left: 20px;
@@ -456,10 +464,13 @@ p {
   .navigation .lien {
     font-size: 16px;
   }
-  .part1 p, .part2 .blocongle p, .part3 .blocprothesiste p {
+  .part1 p,
+  .part2 .blocongle p,
+  .part3 .blocprothesiste p {
     margin: 0 10px;
   }
-  .part2, .part3 {
+  .part2,
+  .part3 {
     margin-top: 50px;
   }
   .pagetarif .cadre {
@@ -573,122 +584,122 @@ p {
 }
 .review {
   animation: fadeIn 0.5s ease-in-out;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
 /* Conteneur principal */
 .container-avis {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 50px;
-  }
-  
-  #avis-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  /* Carte d'avis */
-  .review {
-    background-color: rgba(255, 255, 255, 0.6156862745);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 300px; /* Taille fixe pour chaque carte */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    margin: 10px;
-  }
-  
-  .review:hover {
-    transform: scale(1.05); /* Effet de zoom au survol */
-  }
-  
-  .review-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px; /* Espacement entre étoiles et date */
-    font-size: 0.9em;
-    color: #666;
-    margin-top: auto;
-  }
-  
-  .rating {
-    font-size: 1.2em;
-    color: #ff9800;
-    font-weight: bold;
-  }
-  
-  .review-date {
-    color: #555;
-    font-size: 0.9em;
-    font-weight: normal;
-  }
-  
-  .review img {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    transform: translateY(30%);
-  }
-  
-  .review-title {
-    display: flex;
-  }
-  
-  /* Nom de l'auteur */
-  .review h3 {
-    font-size: 1.2em;
-    color: #d16ba5; /* Rose élégant */
-    margin-bottom: 5px;
-  }
-  
-  /* Texte de l'avis */
-  .review p {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  
-  /* Note avec étoiles */
-  .rating {
-    font-size: 1em;
-    color: #ff9800;
-    font-weight: bold;
-  }
-  
-  /* Ajout d'une petite animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .review {
-    animation: fadeIn 0.5s ease-in-out;
-  }/*# sourceMappingURL=index.css.map */
-  .droits{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px 0 30px;
-a{
-  text-decoration: none;
-  color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#avis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Carte d'avis */
+.review {
+  background-color: rgba(255, 255, 255, 0.6156862745);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 300px; /* Taille fixe pour chaque carte */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.review:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.review-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px; /* Espacement entre étoiles et date */
+  font-size: 0.9em;
+  color: #666;
+  margin-top: auto;
+}
+
+.rating {
+  font-size: 1.2em;
+  color: #ff9800;
   font-weight: bold;
-  &:hover{
-    font-size: 2vh;
-    color: #52355e;
+}
+
+.review-date {
+  color: #555;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.review img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  transform: translateY(30%);
+}
+
+.review-title {
+  display: flex;
+}
+
+/* Nom de l'auteur */
+.review h3 {
+  font-size: 1.2em;
+  color: #d16ba5; /* Rose élégant */
+  margin-bottom: 5px;
+}
+
+/* Texte de l'avis */
+.review p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Note avec étoiles */
+.rating {
+  font-size: 1em;
+  color: #ff9800;
+  font-weight: bold;
+}
+
+/* Ajout d'une petite animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+.review {
+  animation: fadeIn 0.5s ease-in-out;
+} /*# sourceMappingURL=index.css.map */
+.droits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 30px;
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      font-size: 2vh;
+      color: #52355e;
+    }
+  }
 }

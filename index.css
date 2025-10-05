@@ -35,14 +35,32 @@ html p {
 .bandeaunav {
   margin: 0px;
   padding: 0;
-  margin-bottom: 50px;
+
   text-align: center;
   position: relative;
   background-color: #f8f8f8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 4px solid #d9b65e;
 }
 
+.changement-tarifs {
+  text-align: center;
+  background-color: #d9b65e;
+
+  width: 100%;
+  padding: -1px;
+}
+.changement-tarifs p {
+  font-size: 16px;
+  color: #52355e;
+}
+.changement-tarifs a {
+  text-decoration: none;
+  color: #52355e;
+  &:hover {
+    font-size: 1.8vh;
+    color: #52355e;
+  }
+}
 .navigation {
   display: flex;
   justify-content: center;
@@ -288,7 +306,7 @@ p {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
-     object-fit: cover; /* Remplit le conteneur tout en conservant le ratio de l'image */
+  object-fit: cover; /* Remplit le conteneur tout en conservant le ratio de l'image */
 }
 .containerstyle .description {
   padding: 15px;
@@ -408,7 +426,7 @@ p {
   .part1 p,
   .part2 .blocongle,
   .part3 p {
-    margin: 0px 50px 30px 50px;
+    margin: 0px 10px 30px 10px;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -422,6 +440,9 @@ p {
     height: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .part3 p {
+    padding-left: 0;
   }
   .pagetarif .textfinal {
     display: block;
@@ -447,6 +468,13 @@ p {
   }
   .textfinal {
     margin-top: 100px;
+  }
+  .droits {
+    display: flex;
+    flex-direction: column;
+  }
+  .droits p {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 505px) {
@@ -576,4 +604,4 @@ p {
 }
 .review {
   animation: fadeIn 0.5s ease-in-out;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
